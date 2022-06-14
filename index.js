@@ -17,7 +17,7 @@ app.listen(process.env.PORT || 5000, async() => {
         await connect();
         console.log('Rocking On Port 5000');
     }
-    catch{
+    catch(err){
         console.log(err.message);
     }
 });

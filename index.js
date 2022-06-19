@@ -7,11 +7,13 @@ const connect = require('./src/configs/db');
 const app = express();
 
 const productController = require('./src/controllers/products.controller');
+const cartController = require('./src/controllers/cart.controller');
 
 
 app.use(express.json());
 
 app.use('/', productController);
+app.use('/cart', cartController);
 
 
 app.listen(process.env.PORT || 5000, async() => {
